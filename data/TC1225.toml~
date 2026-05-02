@@ -1,0 +1,45 @@
+# ==============================================================================
+# Material Property Data Sheet
+# ==============================================================================
+name   = "Toray TC1225"
+date   = 2026-04-29
+author = "Wouter Grouve"
+note   = "Carbon fiber reinforced LM-PAEK. Measured by Castro Bernardes."
+
+# ------------------------------------------------------------------------------
+# Density [kg/m³]
+# ------------------------------------------------------------------------------
+[rho]
+type  = "Constant"
+value = 1577.6
+
+# ------------------------------------------------------------------------------
+# Specific Heat [J/(kg·K)]
+# ------------------------------------------------------------------------------
+[cp]
+type = "SemiCrystalline"
+Tg   = 426.1    # Glass transition temperature [K]
+Tm   = 524.4    # Melting temperature [K]
+c0   = 0.0      # Intercept at 0K
+c1   = 2.84     # Slope for T < Tm
+c2   = 1.10     # Slope for T > Tm
+dCp  = 34.4     # Specific heat jump at Tg
+dT   = 6.0      # Heaviside smoothing window [K]
+
+# ------------------------------------------------------------------------------
+# Thermal Conductivity [W/(m·K)]
+# ------------------------------------------------------------------------------
+# Longitudinal direction (Fiber direction)
+[k1]
+type  = "Polynomial"
+coefs = [3.18, 0.0097]
+
+# Transverse direction
+[k2]
+type  = "Polynomial"
+value = [0.67, 0.0005]
+
+# Thickness direction
+[k3]
+type  = "Constant"
+value = 0.82
