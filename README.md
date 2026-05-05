@@ -15,9 +15,17 @@ A Julia package for thermal constitutive material modeling and calibration.
 
 ## Installation
 
+Since the package is not yet registered, you can install it directly from GitHub. In the Julia REPL, press `]` to enter the package manager and run:
+
+```julia
+add https://github.com/wjbg/TherMat.jl
+```
+
+Alternatively, you can use `Pkg` in your script:
+
 ```julia
 using Pkg
-Pkg.add("TherMat")
+Pkg.add(url="https://github.com/wjbg/TherMat.jl")
 ```
 
 ## Quick Start
