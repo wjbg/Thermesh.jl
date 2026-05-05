@@ -2,7 +2,7 @@
 
 julia_version = "1.12.6"
 manifest_format = "2.0"
-project_hash = "5ee4183d0a0741046c4c5ffde6372745fa30d566"
+project_hash = "49a3c65f81730d729ab2bfdd756de8799e2a3df6"
 
 [[deps.ADTypes]]
 git-tree-sha1 = "bbc22a9a08a0ef6460041086d8a7b27940ed4ffd"
@@ -1823,7 +1823,7 @@ uuid = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 version = "1.11.0"
 
 [[deps.Thermesh]]
-deps = ["CairoMakie", "Gridap", "Printf", "TOML"]
+deps = ["CairoMakie", "Gridap", "LinearAlgebra", "Printf", "TOML"]
 path = "."
 uuid = "aa04f551-b68a-4134-ba1b-0762791eefc3"
 version = "0.1.0"
