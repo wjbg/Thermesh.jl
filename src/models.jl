@@ -4,7 +4,7 @@
 #
 # This file contains various mathematical models for material properties
 # such as thermal conductivity, density, and specific heat.
-# These models (Constant, Polynomial, PiecewiseLinear, etc.) are all 
+# These models (Constant, Polynomial, PiecewiseLinear, etc.) are all
 # callable functions of temperature.
 # ================================================================
 
@@ -13,7 +13,9 @@
 
 Smooth approximation of the Heaviside step function.
 """
-smooth_heaviside(T, δ) = 0.5 * (1 + tanh(T / δ))
+function smooth_heaviside(T, δ)
+    return (1 + (tanh ∘ (x-> x/δ))(T))/2
+end
 
 """
     ConstantModel(val)
